@@ -2,72 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Moments - Web-to-Print Platform</title>
+    <title>Dream photo Memory Book Platform</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 25px; }
-        .tech-stack { background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0; }
-        .diagram { text-align: center; margin: 30px 0; background: #f5f5f5; padding: 20px; border-radius: 5px; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .tech-stack {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .workflow-img {
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>Moments - Collaborative Memory Book Platform</h1>
-    
+    <div class="header">
+        <h1>Dream photo Memory Book Platform</h1>
+        <p>A web-to-print service for creating group-contributed memory books</p>
+    </div>
+
     <h2>About The Project</h2>
-    <p>Moments is a web-to-print platform enabling collaborative creation of memory books for milestone events. Unlike traditional photobooks, our solution supports:</p>
+    <p>Moments is a specialized web-to-print platform designed for creating collaborative memory books. Unlike traditional photobooks created by individuals, our platform enables multiple contributors to participate in creating a rich, text-heavy memory book for special occasions.</p>
+    
+    <p>The workflow begins when a project organizer initiates a book project. They receive a shareable link to invite contributors who can add pages containing text, photos, or combinations. After contributions are complete, the organizer arranges the content, adds any custom pages, and submits the order. The system generates a print-ready PDF sent directly to our on-demand printing partner.</p>
+    
+    <p>Key differentiators from standard photobook services:</p>
     <ul>
-        <li>Multi-contributor workflows (up to hundreds per book)</li>
-        <li>Rich text-photo compositions with custom layouts</li>
-        <li>End-to-end publishing workflow from collaboration to print fulfillment</li>
+        <li>Multi-user collaboration features</li>
+        <li>Text-heavy page composition</li>
+        <li>Scalable contribution system (supporting hundreds of contributors)</li>
+        <li>Advanced page arrangement tools</li>
+        <li>Integrated print production workflow</li>
     </ul>
-    
-    <div class="diagram">
-        <strong>System Architecture Diagram</strong><br>
-        [Client (Next.js) → Clerk Auth → Supabase DB → Transloadit → S3 → DocRaptor → Lulu API]
-    </div>
-    
-    <h2>Technical Implementation</h2>
+
     <div class="tech-stack">
-        <strong>Core Stack:</strong>
-        <ul>
-            <li>Frontend: Next.js 14 (App Router), React 18, shadcn/ui</li>
-            <li>Backend: Supabase (PostgreSQL, Edge Functions)</li>
-            <li>File Processing: Transloadit pipelines with Uppy</li>
-            <li>PDF Generation: DocRaptor with DearFlip.js preview</li>
-        </ul>
+        <h3>Technology Stack</h3>
+        <p><strong>Frontend:</strong> React/Next.js (Vercel hosted)</p>
+        <p><strong>Backend:</strong> Supabase (Database + Edge Functions)</p>
+        <p><strong>Storage:</strong> S3 for PDFs and images</p>
+        <p><strong>Authentication:</strong> Clerk</p>
+        <p><strong>Payments:</strong> Stripe integration</p>
+        <p><strong>PDF Generation:</strong> DocRaptor</p>
     </div>
-    
-    <h3>Key Technical Challenges</h3>
-    <p><strong>1. Real-time Collaboration:</strong> Implemented Supabase realtime subscriptions for page updates, requiring careful conflict resolution.</p>
-    <p><strong>2. PDF Generation:</strong> DocRaptor integration needed custom CSS paged media rules to match the flipbook preview.</p>
-    <p><strong>3. File Handling:</strong> Transloadit workflows with S3 storage required signed URLs and CDN optimization.</p>
-    
-    <h2>Project Scope</h2>
-    <table border="1" cellpadding="8" cellspacing="0">
-        <tr>
-            <th>Component</th>
-            <th>Count</th>
-        </tr>
-        <tr>
-            <td>Responsive Pages</td>
-            <td>22</td>
-        </tr>
-        <tr>
-            <td>Interactive Modals</td>
-            <td>17</td>
-        </tr>
-        <tr>
-            <td>Core Workflows</td>
-            <td>7</td>
-        </tr>
-    </table>
-    
-    <h2>Third-Party Integrations</h2>
+
+    <h2>Implementation Approach</h2>
+    <p>The implementation follows a component-based architecture with these key systems:</p>
+    <ol>
+        <li>User authentication via Clerk</li>
+        <li>Page editor with Transloadit/Uppy for media handling</li>
+        <li>Book customization interface with drag-and-drop functionality</li>
+        <li>Order processing with Stripe integration</li>
+        <li>PDF generation and print fulfillment workflow</li>
+    </ol>
+
+    <h3>Technical Challenges</h3>
+    <p>Key implementation challenges include:</p>
     <ul>
-        <li><strong>Clerk:</strong> Handles authentication with custom invitation flows</li>
-        <li><strong>Stripe:</strong> Manages complex product variants (book sizes/paper types)</li>
-        <li><strong>Lulu API:</strong> Direct print fulfillment with webhook status updates</li>
+        <li>Real-time collaboration features requiring careful state management</li>
+        <li>Media processing pipeline with Transloadit for image transformations</li>
+        <li>PDF generation with complex layout requirements</li>
+        <li>Inventory synchronization with print partner API</li>
     </ul>
+
+    <h2>Project Scope</h2>
+    <p><strong>22</strong> Responsive Pages | <strong>17</strong> Modals | <strong>7</strong> Core Workflows</p>
+    <p><strong>10</strong> Email Triggers | <strong>5</strong> Integrated Systems</p>
+
+    <h2>Workflow Diagram</h2>
+    <div style="text-align: center;">
+        [Project Organizer] → Creates Project → [Shares Link] → [Contributors Add Content] 
+        → [Organizer Arranges Book] → [PDF Generation] → [Printing Partner]
+    </div>
 </body>
 </html>
