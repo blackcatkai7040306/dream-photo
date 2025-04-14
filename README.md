@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dream Photo Platform</title>
+    <title>Moments - Web-to-Print Platform</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -15,7 +15,7 @@
     <h1>Moments - Collaborative Memory Book Platform</h1>
     
     <h2>About The Project</h2>
-    <p>Dream photo platform enabling collaborative creation of memory books for milestone events. Unlike traditional photobooks, our solution supports:</p>
+    <p>Moments is a web-to-print platform enabling collaborative creation of memory books for milestone events. Unlike traditional photobooks, our solution supports:</p>
     <ul>
         <li>Multi-contributor workflows (up to hundreds per book)</li>
         <li>Rich text-photo compositions with custom layouts</li>
