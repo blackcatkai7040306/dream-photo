@@ -1,7 +1,6 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Moments - Collaborative Memory Book Platform</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,81 +13,91 @@
         h1, h2 {
             color: #2c3e50;
         }
-        .header {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        .tech-stack {
+        .diagram {
             background-color: #f8f9fa;
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
+            text-align: center;
         }
-        .workflow-img {
-            width: 100%;
-            max-width: 800px;
-            border: 1px solid #ddd;
-            margin: 20px 0;
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .tech-item {
+            background-color: #e1f5fe;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Moments - Collaborative Memory Book Platform</h1>
-        <p>A web-to-print service for creating group-contributed memory books</p>
-    </div>
 
-    <h2>About The Project</h2>
-    <p>Moments is a specialized web-to-print platform designed for creating collaborative memory books. Unlike traditional photobooks created by individuals, our platform enables multiple contributors to participate in creating a rich, text-heavy memory book for special occasions.</p>
+<h1>AI-Assisted Development Support Specialist</h1>
+
+<h2>About the Project</h2>
+<p>This role supports multiple web application projects built with modern technologies and AI-assisted development tools. The primary focus is troubleshooting, optimization, and guidance rather than full-scale development.</p>
+
+<p>The projects involve:</p>
+<ul>
+    <li>React-based frontends with TypeScript and TailwindCSS</li>
+    <li>Supabase backend services (database, auth, storage)</li>
+    <li>Vercel-hosted deployments</li>
+    <li>AI-assisted development workflow using Windsurf or similar tools</li>
+</ul>
+
+<div class="diagram">
+    <h3>Project Architecture Flow</h3>
+    <p>[React Frontend] ↔ [Supabase API Layer] ↔ [PostgreSQL Database]</p>
+    <p>↑<br>Vercel Deployment</p>
+</div>
+
+<h2>Technical Challenges and Solutions</h2>
+<h3>Common Issues Faced:</h3>
+<ol>
+    <li><strong>AI-Generated Code Limitations</strong>:
+        <p>Windsurf/Copilot sometimes produces non-optimal or outdated patterns. Requires validation of:</p>
+        <ul>
+            <li>Proper TypeScript typing</li>
+            <li>Correct Supabase query patterns</li>
+            <li>React hooks best practices</li>
+        </ul>
+    </li>
     
-    <p>The workflow begins when a project organizer initiates a book project. They receive a shareable link to invite contributors who can add pages containing text, photos, or combinations. After contributions are complete, the organizer arranges the content, adds any custom pages, and submits the order. The system generates a print-ready PDF sent directly to our on-demand printing partner.</p>
+    <li><strong>Supabase-Vercel Integration</strong>:
+        <p>Environment variable management and proper CORS configuration often need adjustment during deployment.</p>
+    </li>
     
-    <p>Key differentiators from standard photobook services:</p>
-    <ul>
-        <li>Multi-user collaboration features</li>
-        <li>Text-heavy page composition</li>
-        <li>Scalable contribution system (supporting hundreds of contributors)</li>
-        <li>Advanced page arrangement tools</li>
-        <li>Integrated print production workflow</li>
-    </ul>
+    <li><strong>TypeScript Type Definitions</strong>:
+        <p>AI tools frequently miss proper type generation for Supabase responses, requiring manual intervention.</p>
+    </li>
+</ol>
 
-    <div class="tech-stack">
-        <h3>Technology Stack</h3>
-        <p><strong>Frontend:</strong> React/Next.js (Vercel hosted)</p>
-        <p><strong>Backend:</strong> Supabase (Database + Edge Functions)</p>
-        <p><strong>Storage:</strong> S3 for PDFs and images</p>
-        <p><strong>Authentication:</strong> Clerk</p>
-        <p><strong>Payments:</strong> Stripe integration</p>
-        <p><strong>PDF Generation:</strong> DocRaptor</p>
-    </div>
+<h2>Technical Stack</h2>
+<div class="tech-stack">
+    <span class="tech-item">React 18+</span>
+    <span class="tech-item">TypeScript 5+</span>
+    <span class="tech-item">TailwindCSS 3+</span>
+    <span class="tech-item">Supabase</span>
+    <span class="tech-item">PostgreSQL</span>
+    <span class="tech-item">Vercel</span>
+    <span class="tech-item">Windsurf/Copilot</span>
+</div>
 
-    <h2>Implementation Approach</h2>
-    <p>The implementation follows a component-based architecture with these key systems:</p>
-    <ol>
-        <li>User authentication via Clerk</li>
-        <li>Page editor with Transloadit/Uppy for media handling</li>
-        <li>Book customization interface with drag-and-drop functionality</li>
-        <li>Order processing with Stripe integration</li>
-        <li>PDF generation and print fulfillment workflow</li>
-    </ol>
+<h2>Working Methodology</h2>
+<p>The support process involves:</p>
+<ol>
+    <li>Issue triage via chat/screenshare</li>
+    <li>Analysis of AI-generated code segments</li>
+    <li>Recommendations for optimization</li>
+    <li>Debugging assistance</li>
+    <li>Deployment troubleshooting</li>
+</ol>
 
-    <h3>Technical Challenges</h3>
-    <p>Key implementation challenges include:</p>
-    <ul>
-        <li>Real-time collaboration features requiring careful state management</li>
-        <li>Media processing pipeline with Transloadit for image transformations</li>
-        <li>PDF generation with complex layout requirements</li>
-        <li>Inventory synchronization with print partner API</li>
-    </ul>
+<p>Typical workflow focuses on incremental improvements rather than complete rewrites, maintaining the AI-assisted development approach while ensuring production-quality output.</p>
 
-    <h2>Project Scope</h2>
-    <p><strong>22</strong> Responsive Pages | <strong>17</strong> Modals | <strong>7</strong> Core Workflows</p>
-    <p><strong>10</strong> Email Triggers | <strong>5</strong> Integrated Systems</p>
-
-    <h2>Workflow Diagram</h2>
-    <div style="text-align: center;">
-        [Project Organizer] → Creates Project → [Shares Link] → [Contributors Add Content] 
-        → [Organizer Arranges Book] → [PDF Generation] → [Printing Partner]
-    </div>
 </body>
+</html>
