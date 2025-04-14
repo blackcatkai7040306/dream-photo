@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Moments - Collaborative Memory Book Platform</title>
@@ -93,4 +92,3 @@
         → [Organizer Arranges Book] → [PDF Generation] → [Printing Partner]
     </div>
 </body>
-</html>
