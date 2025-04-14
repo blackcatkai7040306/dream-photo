@@ -1,103 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .diagram {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0;
-        }
-        .tech-item {
-            background-color: #e1f5fe;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>AI-Assisted Web Development Support</title>
 </head>
 <body>
 
-<h1>AI-Assisted Development Support Specialist</h1>
+<h1>AI-Assisted Web Projects Technical Support</h1>
 
 <h2>About the Project</h2>
-<p>This role supports multiple web application projects built with modern technologies and AI-assisted development tools. The primary focus is troubleshooting, optimization, and guidance rather than full-scale development.</p>
+<p>
+This repository serves as the central hub for providing technical support across multiple AI-assisted web applications. The projects leverage modern web technologies with AI-powered development tools to accelerate prototyping and deployment. As these projects are primarily developed using AI coding assistants (Windsurf), they require periodic human oversight for:
+</p>
 
-<p>The projects involve:</p>
 <ul>
-    <li>React-based frontends with TypeScript and TailwindCSS</li>
-    <li>Supabase backend services (database, auth, storage)</li>
-    <li>Vercel-hosted deployments</li>
-    <li>AI-assisted development workflow using Windsurf or similar tools</li>
+<li>Debugging AI-generated code artifacts</li>
+<li>Resolving deployment configuration issues</li>
+<li>Optimizing database schemas in Supabase</li>
+<li>Implementing complex features beyond AI's current capabilities</li>
 </ul>
 
-<div class="diagram">
-    <h3>Project Architecture Flow</h3>
-    <p>[React Frontend] ↔ [Supabase API Layer] ↔ [PostgreSQL Database]</p>
-    <p>↑<br>Vercel Deployment</p>
-</div>
+<h3>Technical Architecture</h3>
+<pre>
+[Client] → [React/Tailwind Frontend] → [Supabase API Layer] → [PostgreSQL DB]
+           ↑                   ↑
+        [Vercel]          [AI Code Generation]
+</pre>
 
-<h2>Technical Challenges and Solutions</h2>
-<h3>Common Issues Faced:</h3>
+<h2>Key Technical Challenges</h2>
+
+<h3>1. AI-Generated Code Validation</h3>
+<p>
+The primary challenge involves verifying AI-generated implementations, particularly around:
+- Type safety in TypeScript components
+- Proper React hooks usage
+- Supabase query optimization
+- Authentication flow integrity
+</p>
+
+<h3>2. Vercel-Supabase Integration</h3>
+<p>
+Common issues include:
+- Environment variable management between platforms
+- Proper CORS configuration
+- Edge function cold starts
+- Database connection pooling
+</p>
+
+<h3>3. IDE-Assisted Development</h3>
+<p>
+Working with Windsurf/Cursor requires:
+- Reviewing AI-suggested code for context awareness
+- Maintaining consistent coding patterns
+- Validating third-party library integrations
+</p>
+
+<h2>Development Approach</h2>
+
+<h3>Debugging Methodology</h3>
 <ol>
-    <li><strong>AI-Generated Code Limitations</strong>:
-        <p>Windsurf/Copilot sometimes produces non-optimal or outdated patterns. Requires validation of:</p>
-        <ul>
-            <li>Proper TypeScript typing</li>
-            <li>Correct Supabase query patterns</li>
-            <li>React hooks best practices</li>
-        </ul>
-    </li>
-    
-    <li><strong>Supabase-Vercel Integration</strong>:
-        <p>Environment variable management and proper CORS configuration often need adjustment during deployment.</p>
-    </li>
-    
-    <li><strong>TypeScript Type Definitions</strong>:
-        <p>AI tools frequently miss proper type generation for Supabase responses, requiring manual intervention.</p>
-    </li>
+<li>Reproduce issue in isolated environment</li>
+<li>Analyze AI-generated code path</li>
+<li>Verify data flow across stack layers</li>
+<li>Implement human-reviewed solution</li>
+<li>Document learning for future AI prompts</li>
 </ol>
 
-<h2>Technical Stack</h2>
-<div class="tech-stack">
-    <span class="tech-item">React 18+</span>
-    <span class="tech-item">TypeScript 5+</span>
-    <span class="tech-item">TailwindCSS 3+</span>
-    <span class="tech-item">Supabase</span>
-    <span class="tech-item">PostgreSQL</span>
-    <span class="tech-item">Vercel</span>
-    <span class="tech-item">Windsurf/Copilot</span>
-</div>
+<h3>Collaboration Protocol</h3>
+<p>
+For non-technical collaboration:
+1. Screen sharing with technical commentary
+2. Visual workflow diagrams
+3. Plain English explanations with technical footnotes
+4. Option comparison matrices for technical decisions
+</p>
 
-<h2>Working Methodology</h2>
-<p>The support process involves:</p>
-<ol>
-    <li>Issue triage via chat/screenshare</li>
-    <li>Analysis of AI-generated code segments</li>
-    <li>Recommendations for optimization</li>
-    <li>Debugging assistance</li>
-    <li>Deployment troubleshooting</li>
-</ol>
-
-<p>Typical workflow focuses on incremental improvements rather than complete rewrites, maintaining the AI-assisted development approach while ensuring production-quality output.</p>
+<h2>System Diagram</h2>
+<!-- Placeholder for architecture diagram -->
+<svg width="400" height="200" viewBox="0 0 400 200">
+  <rect x="50" y="50" width="100" height="40" fill="#ddd"/>
+  <text x="100" y="75" text-anchor="middle">React Frontend</text>
+  
+  <rect x="200" y="50" width="100" height="40" fill="#ddd"/>
+  <text x="250" y="75" text-anchor="middle">Supabase</text>
+  
+  <rect x="200" y="120" width="100" height="40" fill="#ddd"/>
+  <text x="250" y="145" text-anchor="middle">PostgreSQL</text>
+  
+  <rect x="50" y="120" width="100" height="40" fill="#ddd"/>
+  <text x="100" y="145" text-anchor="middle">Vercel</text>
+  
+  <path d="M150 70 L200 70" stroke="black"/>
+  <path d="M250 90 L250 120" stroke="black"/>
+  <path d="M150 130 L200 130" stroke="black"/>
+</svg>
 
 </body>
 </html>
