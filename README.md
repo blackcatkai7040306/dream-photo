@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dream photo Memory Book Platform</title>
+    <title>Moments - Collaborative Memory Book Platform</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -36,7 +36,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Dream photo Memory Book Platform</h1>
+        <h1>Moments - Collaborative Memory Book Platform</h1>
         <p>A web-to-print service for creating group-contributed memory books</p>
     </div>
 
